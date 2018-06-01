@@ -25,6 +25,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'thinca/vim-quickrun'
 "" surround.vim
 Plug 'tpope/vim-surround'
+"" vim-repeat
+Plug 'tpope/vim-repeat'
+"" vim-easyclip
+Plug 'svermeulen/vim-easyclip'
 
 "" terraform
 Plug 'hashivim/vim-terraform'    
@@ -87,6 +91,9 @@ let g:terraform_registry_module_completion = 0
 
 "" vim-quickrun
 set splitbelow 
+
+"" vim-easyclip
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 "==============================================================================
 "==== set let                                                                  
