@@ -40,9 +40,27 @@ else
   echo "fzf installation is completed"
 fi
 
+#######################################
+# Install tig
+#######################################
+if [ -e ~/bin/tig ]; then
+  echo "tig is already installed"
+else
+  git clone git://github.com/jonas/tig.git ~/src-tig
+  cd ~/src-tig
+  pwd
+  make
+  make install
+  if [ $? = 0 ]; then
+    echo "tig install is completed"
+    cd ~
+    rm -rf ~/src-tig
+  fi
+  echo "tig installation is completed"
+fi
 
 #######################################
-# synbolic link
+# Deploy .zshrc to ${HOME}
 #######################################
 if [ -e ~/.zshrc ]; then
   unlink ~/.zshrc
