@@ -20,6 +20,28 @@ else
 fi
 
 #######################################
+# Install zplug
+#######################################
+if [ -e ~/.zplug ]; then
+  echo "zplug is already installed"
+else
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+  echo "zplug installation is completed"
+fi 
+
+#######################################
+# Install fzf
+#######################################
+if [ -e ~/.fzf ]; then
+  echo "fzf is already installed"
+else
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+  echo "fzf installation is completed"
+fi
+
+
+#######################################
 # synbolic link
 #######################################
 if [ -e ~/.zshrc ]; then
