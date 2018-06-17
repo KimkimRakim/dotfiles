@@ -49,3 +49,21 @@ setopt hist_ignore_dups
 # Add command to history immediately when executed
 setopt inc_append_history
 
+##############################################
+## alias
+##############################################
+# basic
+alias reload='source ~/.zshrc'
+alias la='ls -al'
+alias mkdir='mkdir -p'
+# terraform
+alias tw='terraform workspace'
+alias tp='terraform plan'
+alias ta='terraform apply'
+alias ti='terraform init'
+# gcloud
+alias gcl='gcloud config list'
+alias gi='gcloud init'
+# kubectl
+alias kuget='kubectl get'
+alias kuexec='kubectl exec -it'

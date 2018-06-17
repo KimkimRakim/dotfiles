@@ -22,5 +22,7 @@ else
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   # Install plugin listed in .vimrc
   vim -c :PlugInstall -c q! -c q!
+  echo "######################################"
+  echo "## vim-plug installation is completed ##"
+  echo "######################################"
 fi
-

@@ -17,6 +17,10 @@ else
   for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
     ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
   done
+  echo "zstyle ':prezto:load' pmodule 'syntax-highlighting' " >> ~/.zpreztorc
+  echo "######################################"
+  echo "## prezto installation is completed ##"
+  echo "######################################"
 fi
 
 #######################################
@@ -26,7 +30,9 @@ if [ -e ~/.zplug ]; then
   echo "zplug is already installed"
 else
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-  echo "zplug installation is completed"
+  echo "######################################"
+  echo "## zplug installation is completed  ##"
+  echo "######################################"
 fi 
 
 #######################################
@@ -37,7 +43,9 @@ if [ -e ~/.fzf ]; then
 else
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install
-  echo "fzf installation is completed"
+  echo "######################################"
+  echo "## fzf installation is completed    ##"
+  echo "######################################"
 fi
 
 #######################################
@@ -56,7 +64,9 @@ else
     cd ~
     rm -rf ~/src-tig
   fi
-  echo "tig installation is completed"
+  echo "######################################"
+  echo "## tig installation is completed    ##"
+  echo "######################################"
 fi
 
 #######################################
