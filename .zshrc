@@ -67,3 +67,5 @@ alias gi='gcloud init'
 # kubectl
 alias kuget='kubectl get'
 alias kuexec='kubectl exec -it'
+# local setting
+[ -f ~/.alias ] && source ~/.alias
