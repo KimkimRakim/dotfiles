@@ -67,5 +67,9 @@ alias gi='gcloud init'
 # kubectl
 alias kuget='kubectl get'
 alias kuexec='kubectl exec -it'
+alias kuapply='kubectl apply -f'
+# tmux
+alias tmnew='tmux new -s'
+alias tma='tmux a -t'
 # local setting
 [ -f ~/.alias ] && source ~/.alias
