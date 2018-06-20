@@ -66,6 +66,7 @@ alias gcl='gcloud config list'
 alias gi='gcloud init'
 # kubectl
 alias kuget='kubectl get'
+alias kudesc='kubectl describe'
 alias kuexec='kubectl exec -it'
 alias kuapply='kubectl apply -f'
 # tmux
