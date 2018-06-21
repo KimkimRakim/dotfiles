@@ -58,6 +58,10 @@ setopt inc_append_history
 alias reload='source ~/.zshrc'
 alias la='ls -al'
 alias mkdir='mkdir -p'
+alias .='cd'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
 # terraform
 alias tw='terraform workspace'
 alias tp='terraform plan'
