@@ -21,6 +21,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 prompt pure
 prompt_pure_username=%F{240}LOCAL
+export EDITOR='vim' # nanoからvimに変更
+export VISUAL='vim' # nanoからvimに変更
 
 ##############################################
 ## zplug setting
