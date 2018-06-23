@@ -60,6 +60,7 @@ nnoremap <silent> <Space>o :OverCommandLine<CR>%s///cg<Left><Left><Left><Left>
 nnoremap sub :OverCommandLine<CR>%s/<C-r><C-w>//cg<Left><Left><Left>
 
 " Lightline
+set noshowmode
 set laststatus=2
 
 " Syntastic Config
