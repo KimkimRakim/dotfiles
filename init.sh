@@ -11,6 +11,7 @@ cd `dirname $0`
 #######################################
 #ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ${PWD}/.vimrc ~/.vimrc
+ln -sf ${PWD}/.tmux.conf ~/.tmux.conf
 
 #######################################
 # Install vim-plug

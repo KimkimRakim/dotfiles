@@ -80,3 +80,10 @@ alias tmnew='tmux new -s'
 alias tma='tmux a -t'
 # local setting
 [ -f ~/.alias ] && source ~/.alias
+
+##############################################
+## tmux
+##############################################
+if [[ ! -n $TMUX ]]; then
+  tmux -2 new-session \; source-file ~/.tmux/new-session && exit
+fi
