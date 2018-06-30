@@ -4,13 +4,13 @@
 source ~/.zplug/init.zsh
 ## zplug
 zplug "b4b4r07/enhancd", use:init.sh, lazy:true
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-# if ! zplug check --verbose; then
-#   printf "Install? [y/N]: "
-#   if read -q; then
-#   ¦ echo; zplug install
-#   fi
-# fi
+zplug "zsh-users/zsh-syntax-highlighting", defer:2 
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+  ¦ echo; zplug install
+  fi
+fi
 zplug load --verbose
 
 ##############################################
@@ -21,13 +21,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 prompt pure
 prompt_pure_username=%F{240}LOCAL
-export EDITOR='vim' # nanoからvimに変更
-export VISUAL='vim' # nanoからvimに変更
+# Change default editor
+export EDITOR='vim' 
+export VISUAL='vim' 
 
 ##############################################
 ## zplug setting
 ###############################################
-#enhancd
+# enhancd
 source ~/.zplug/repos/b4b4r07/enhancd/init.sh
 export ENHANCD_DISABLE_DOT=1
 
@@ -84,6 +85,12 @@ alias tma='tmux a -t'
 ##############################################
 ## tmux
 ##############################################
-# if [[ ! -n $TMUX ]]; then
-#   tmux -2 new-session \; source-file ~/.tmux/new-session && exit
-# fi
+if [[ ! -n $TMUX ]]; then
+  # get the IDs
+  ID="`tmux list-sessions`"
+  if [[ -z "$ID" ]]; then
+    tmux -2 new-session \; source-file ~/.tmux/new-session && exit
+  fi
+  #ID="`echo $ID | fzf | cut -d: -f1`"
+  tmux attach-session -t default && exit
+fi
