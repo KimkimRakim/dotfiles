@@ -84,6 +84,6 @@ alias tma='tmux a -t'
 ##############################################
 ## tmux
 ##############################################
-if [[ ! -n $TMUX ]]; then
-  tmux -2 new-session \; source-file ~/.tmux/new-session && exit
-fi
+# if [[ ! -n $TMUX ]]; then
+#   tmux -2 new-session \; source-file ~/.tmux/new-session && exit
+# fi
