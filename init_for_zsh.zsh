@@ -70,14 +70,45 @@ else
 fi
 
 #######################################
+# Install tmux
+#######################################
+if [ -e ~/.tmux ]; then
+  echo "tmux is already installed"
+else
+  mkdir ~/.tmux
+  if [ $? = 0 ]; then
+    echo "######################################"
+    echo "## tmux installation is completed   ##"
+    echo "######################################"
+  else
+    echo "######################################"
+    echo "## tmux installation is failed       ##"
+    echo "######################################"
+  fi
+fi
+
+#######################################
 # Deploy .zshrc to ${HOME}
 #######################################
 if [ -e ~/.zshrc ]; then
   unlink ~/.zshrc
-  echo unlinked
+  echo "unlinked original .zshrc"
 fi
 
 ln -sf ${PWD}/.zshrc ~/.zshrc
 if [ $? = 0 ]; then
-  echo success synbolic link .zshrc
+  echo "success synbolic link .zshrc"
+fi
+
+#######################################
+# Deploy .tmux.conf to ${HOME}
+#######################################
+if [ -e ~/.tmux.conf ]; then
+  unlink ~/.tmux.conf
+  echo "unlinked original .tmux.conf"
+fi
+
+ln -sf ${PWD}/.tmux.conf ~/.tmux.conf
+if [ $? = 0 ]; then
+  echo "success synbolic link .tmux.conf"
 fi
