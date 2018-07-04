@@ -107,7 +107,7 @@ colorscheme hybrid_material
 set cursorline
 set virtualedit=onemore
 "" Autoindent
-"set smartindent
+set smartindent
 "" Show { and [
 set showmatch
 "" Visualize space
