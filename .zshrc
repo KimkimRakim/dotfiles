@@ -32,6 +32,11 @@ export VISUAL='vim'
 source ~/.zplug/repos/b4b4r07/enhancd/init.sh
 export ENHANCD_DISABLE_DOT=1
 
+##############################################
+## vi mode setting
+##############################################
+bindkey "jj" vi-cmd-mode
+
 ###############################################
 ## fzf setting
 ###############################################
@@ -94,3 +99,4 @@ if [[ ! -n $TMUX ]]; then
   #ID="`echo $ID | fzf | cut -d: -f1`"
   tmux attach-session -t default && exit
 fi
+

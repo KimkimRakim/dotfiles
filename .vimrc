@@ -149,5 +149,4 @@ nnoremap - <C-x>
 nnoremap Q :q! <Enter>
 nnoremap <silent> <Space>a ggVG 
 nnoremap ; :
-
-
+inoremap <silent> jj <ESC>
