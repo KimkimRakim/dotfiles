@@ -29,6 +29,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 "" vim-easyclip
 Plug 'svermeulen/vim-easyclip'
+"" grep.vim
+Plug 'vim-scripts/grep.vim'
 
 "" terraform
 Plug 'hashivim/vim-terraform'    
