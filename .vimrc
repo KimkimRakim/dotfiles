@@ -144,6 +144,10 @@ inoremap <Esc> <Esc>
 "==============================================================================
 "==== other
 "==============================================================================
+" this is need if your delete key doesn't work
+set backspace=indent,eol,start
+" set file type
+au BufNewFile,BufRead *.txt :set filetype=markdown "Not commited"
 
 "==============================================================================
 "==== key bind
